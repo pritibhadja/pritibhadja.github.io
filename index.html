@@ -343,6 +343,18 @@
   .achieve-title { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; margin-bottom:0.2rem; }
   .achieve-sub { font-size: 0.82rem; color: var(--muted); }
 
+  /* Extra spacing for Experience, Achievements and Certifications */
+  .section-spacing {
+    margin-top: 60px;
+    margin-bottom: 25px;
+  }
+  .achieve-list + .section-spacing {
+    margin-top: 70px;
+  }
+  .achieve-item {
+    margin-bottom: 25px;
+  }
+
   /* ── CONTACT ── */
   .contact-wrap {
     display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
@@ -446,7 +458,7 @@
 
   <div class="hero-ctas">
     <a href="#projects" class="btn btn-primary">View My Work →</a>
-    <a href="resume.pdf" download class="btn btn-outline">
+    <a href="PritiBhadja_Resume.pdf" download class="btn btn-outline">
        Download Resume
     </a>
   </div>
@@ -505,7 +517,7 @@
         <span class="tag">Git</span>
         <span class="tag">GitHub</span>
         <span class="tag">VS Code</span>
-        <span class="tag">Vercel</span>
+        <span class="tag">Render</span>
       </div>
     </div>
   </div>
@@ -528,6 +540,7 @@
         <span class="tag">CSS</span>
         <span class="tag pink">JavaScript</span>
          <span class="tag yellow">mySQL</span>
+         <span class="tag green">Python</span>
       </div>
       <div class="project-links">
         <a href="Project_video.mp4" target="_blank" class="proj-link demo">Live Demo</a>
@@ -542,11 +555,28 @@
       <div class="project-stack">
         <span class="tag green">HTML</span>
         <span class="tag pink">CSS</span>
-        <span class="tag">JavaScript</span>
+        <span class="tag">Python</span>
       </div>
       <div class="project-links">
-        <a href="#" class="proj-link demo">Live Demo</a>
+        <a href="https://codealpha-sales-price-prediction.onrender.com" class="proj-link demo">Live Demo</a>
         <a href="https://github.com/pritibhadja/CodeAlpha_Sales-Price-Prediction" target="_blank" class="proj-link code">GitHub → </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-num">03 / PROJECT</div>
+      <div class="project-title">Car Price Prediction</div>
+      <p class="project-desc">CarVal is a machine learning web application designed to estimate the resale value of used cars based on various features such as year of manufacture, present price, distance driven, fuel type, transmission, and ownership history.
+
+The application uses a Random Forest Regressor model trained on Indian car market data to provide accurate estimations through a clean, modern web interface.</p>
+      <div class="project-stack">
+        <span class="tag green">HTML</span>
+        <span class="tag pink">CSS</span>
+        <span class="tag">Python</span>
+      </div>
+      <div class="project-links">
+        <a href="https://codealpha-car-price-prediction-1.onrender.com" class="proj-link demo">Live Demo</a>
+        <a href="https://github.com/pritibhadja/CodeAlpha_Car-Price-Prediction" target="_blank" class="proj-link code">GitHub → </a>
       </div>
     </div>
 
@@ -564,15 +594,35 @@
     <div class="achieve-item" data-aos="fade-right" data-aos-delay="0">
       <div class="achieve-icon">🥇</div>
       <div>
-        <div class="achieve-title">Intern at CodeAlpha</div>
-        <div class="achieve-sub">I am currently working as an intern at CodeAlpha, where I am gaining hands-on experience in real-world projects. I am enhancing my skills in programming, problem-solving, and software development.</div>
+        <div class="achieve-title">Data Science Intern at CodeAlpha</div>
+        <div class="achieve-sub">
+          Worked on real-world Data Science and Machine Learning projects using Python.
+          Performed data preprocessing, visualization, and predictive model development using Pandas, NumPy, and Scikit-learn.
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="CodeAlpha-certificate.pdf" target="_blank" class="proj-link demo">Certificate</a>
+        <a href="CodeAlpha-LOR.pdf" target="_blank" class="proj-link demo">LOR</a>
       </div>
     </div>
 
-    <div data-aos="fade-up">
-    <h2 class="section-title">Achievements 🏆 </h2>
+    <div class="achieve-item" data-aos="fade-right" data-aos-delay="100">
+      <div class="achieve-icon">🥇</div>
+      <div>
+        <div class="achieve-title">Data Analytics Intern — Jinarth Infotech (Present)</div>
+        <div class="achieve-sub">
+          Performing data preprocessing, analysis, and visualization using modern analytics tools.
+          Creating interactive dashboards and reports for data-driven decision making.
+        </div>
+      </div>
+    </div>
   </div>
-    
+
+  <div class="section-spacing" data-aos="fade-up">
+    <h2 class="section-title">Achievements 🏆</h2>
+  </div>
+
+  <div class="achieve-list">
     <div class="achieve-item" data-aos="fade-right" data-aos-delay="200">
       <div class="achieve-icon">📜</div>
       <div>
@@ -580,7 +630,21 @@
         <div class="achieve-sub">Actively practicing Data Structures & Algorithms on LeetCode</div>
       </div>
     </div>
-    
+  </div>
+
+  <div class="section-spacing" data-aos="fade-up">
+    <h2 class="section-title">Certifications 📜</h2>
+  </div>
+
+  <div class="achieve-list">
+    <div class="achieve-item" data-aos="fade-right" data-aos-delay="300">
+      <div class="achieve-icon">📜</div>
+      <div>
+        <div class="achieve-title">CodeAlpha Certificate</div>
+        <div class="project-links">
+          <a href="CodeAlpha-certificate.pdf" target="_blank" class="proj-link demo">Certificate</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -593,11 +657,13 @@ function sendToWhatsApp() {
   const email = document.querySelector('input[type="email"]').value;
   const message = document.querySelector('textarea').value;
 
-  const phoneNumber = "918347758215"; // 👉 put your number (with country code)
+  const phoneNumber = "918347758215";
 
-  const text = `Hello, I'm ${name}%0AEmail: ${email}%0A${message}`;
+  const text = `Hello, I'm ${name}
+Email: ${email}
+Message: ${message}`;
 
-  const url = `https://wa.me/${phoneNumber}?text=${text}`;
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
 
   window.open(url, "_blank");
 }
